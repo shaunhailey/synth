@@ -1,1 +1,1 @@
-master
+//content for the master output component
