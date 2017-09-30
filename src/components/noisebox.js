@@ -93,54 +93,7 @@ class Noisebox extends Component {
               </div>
             </div>
           </div>
-          <div class="thirdBar" />
-          <div class="fourthBar" />
         </div>
-        <div class="synthBox2">
-          <div class="synthBox1">
-            <div class="outerShell1">
-              <div class="topBar">
-                <p>Synth Patch1</p>
-
-                <div class="topBarRight">
-                  <div class="topBarButton">
-                    <button type="button" class="btn">
-                      X
-                    </button>
-                  </div>
-
-                  <div class="outputSelector">
-                    <select id="patchOutput">
-                      <option value="value1" selected>
-                        Patch2
-                      </option>
-                      <option value="value2">Patch3</option>
-                      <option value="value3">Patch4</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="secondBar">
-                <div class="slider1">
-                  <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
-                  <h3>OSC1</h3>
-                </div>
-                <div class="slider1">
-                  <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
-                  <h3>FMod</h3>
-                </div>
-                <div class="slider1">
-                  <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
-                  <h3>OSC2</h3>
-                </div>
-              </div>
-            </div>
-            <div class="thirdBar" />
-            <div class="fourthBar" />
-          </div>
-        </div>{' '}
-        <div class="synthBox3" />
       </div>
     )
   }
