@@ -1,1 +1,8 @@
-//content for the master output component
+import React, { Component } from 'react'
+import '../styles/keys.css'
+
+class Keyboard extends Component {
+  render() {
+    return <div />
+  }
+}
