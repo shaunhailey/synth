@@ -9,7 +9,7 @@ import '../styles/App.css'
 import '../styles/index.css'
 
 const App = () =>
-  <div>
+  <div className="app">
     <Noisebox />
     <Keyboard />
   </div>

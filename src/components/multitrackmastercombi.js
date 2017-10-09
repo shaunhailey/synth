@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Tone from 'tone'
 
 var synth = new Tone.Synth().toMaster()
 

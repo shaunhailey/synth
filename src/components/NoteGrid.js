@@ -1,6 +1,7 @@
 //component heavily inspired by https://github.com/MelisaIm/melodyjs
 
 import React, { Component } from 'react'
+import Tone from 'tone'
 
 export default class NoteGrid extends Component {
   constructor(props) {

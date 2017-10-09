@@ -1,69 +1,63 @@
 import React, { Component } from 'react'
 import '../styles/noisebox.css'
 
-//Component notes: this is the component containing one "Noisebox" synth patch.
-//Idea is to allow multiple synths simultaneously. Each patch will have two
-//oscillators and one frequency modulation tool. Each osc/fm tool will have
-//on/off. Each new instance of Noisebox will be numbered +1--i.e. if you already
-//have one Noisebox in view (named "Noisebox Patch 1"), then clicking
-//"Add Noisebox" will instantiate a new Noisebox titled "Noisebox Patch 2."
 class Noisebox extends Component {
   render() {
     return (
-      <div class="wrapper">
-        <div class="Adder">
-          <div class="patchAdder">
-            <button type="button" class="btn">
+      <div className="wrapper">
+        <div className="Adder">
+          <div className="patchAdder">
+            <button type="button" className="btn">
               Add Patch
             </button>
           </div>
-          <div class="stepAdder">
-            <button type="button" class="btn">
+          <div className="stepAdder">
+            <button type="button" className="btn">
               Add Stepper
             </button>
           </div>
         </div>
-        <div class="synthBox1">
-          <div class="outerShell1">
-            <div class="topBar">
+        <div className="synthBox1">
+          <div className="outerShell1">
+            <div className="topBar">
               <p>Synth Patch1</p>
 
-              <div class="topBarRight">
-                <div class="topBarButton">
-                  <button type="button" class="btnX">
+              <div className="topBarRight">
+                <div className="topBarButton">
+                  <button type="button" className="btnX">
                     X
                   </button>
                 </div>
 
-                <div class="outputSelector">
+                <div className="outputSelector">
                   <select id="patchOutput">
-                    <option value="value1" selected>
+                    <option value="value1" value>
                       Output to: Master
                     </option>
-                    <option value="value1">Output to: Patch2</option>
-                    <option value="value2">Output to: Patch3</option>
-                    <option value="value3">Output to: Patch4</option>
+                    <option value="value2">Output to: Patch2</option>
+                    <option value="value3">Output to: Patch3</option>
+                    <option value="value4">Output to: Patch4</option>
                   </select>
                 </div>
-                <div class="onOff">
-                  <button type="button" class="btn">
+                <div className="onOff">
+                  <button type="button" className="btn">
                     Patch On/Off
                   </button>
                 </div>
               </div>
             </div>
 
-            <div class="leftBar">
-              <div class="patchGainSliderLeft">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider2" />
-                <h3 class="verticalSlider">Gain</h3>
-                <h3 class="verticalSliderTicks">| | | | | | | | | | |</h3>
+            <div className="leftBar">
+              <div className="patchGainSliderLeft">
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider2" />
+                <h3 className="verticalSlider">Gain</h3>
+                <h3 className="verticalSliderTicks">| | | | | | | | | | |</h3>
               </div>
             </div>
 
-            <div class="secondBar">
-              <div class="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
+            <div className="secondBar">
+              <div className="slider1">
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
                 <datalist id="tickmarks">
                   <option value="0" />
                   <option value="1" />
@@ -78,17 +72,17 @@ class Noisebox extends Component {
                   <option value="10" />
                   <option value="11" />
                 </datalist>
-                <h3 class="horizontalSliderTicks">| | | | | | | | | | |</h3>
+                <h3 className="horizontalSliderTicks">| | | | | | | | | | |</h3>
                 <h3>OSC1</h3>
               </div>
-              <div class="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
-                <h3 class="horizontalSliderTicks">| | | | | | | | | | |</h3>
+              <div className="slider1">
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
+                <h3 className="horizontalSliderTicks">| | | | | | | | | | |</h3>
                 <h3>FMod</h3>
               </div>
-              <div class="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" class="slider1" />
-                <h3 class="horizontalSliderTicks">| | | | | | | | | | |</h3>
+              <div className="slider1">
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
+                <h3 className="horizontalSliderTicks">| | | | | | | | | | |</h3>
                 <h3>OSC2</h3>
               </div>
             </div>
