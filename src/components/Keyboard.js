@@ -18,7 +18,7 @@ class Keyboard extends Component {
     synth.triggerAttack(e.target.textContent)
   }
   handleUp = e => {
-    synth.triggerRelease(e.target.textContent)
+    synth.triggerRelease()
   }
   onMouseDown = this.handleDown
   onMouseUp = this.handleUp
@@ -26,268 +26,796 @@ class Keyboard extends Component {
   render() {
     return (
       <div className="keys">
-        <button type="button" className="btnWhiteKeys" value="27.5000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="27.5000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A0
         </button>
-        <button type="button" className="btnBlackKeys" value="29.1352">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="29.1352"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#0
         </button>
-        <button type="button" className="btnWhiteKeys" value="30.8677">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="30.8677"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B0
         </button>
-        <button type="button" className="btnWhiteKeys" value="32.7032">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="32.7032"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C1
         </button>
-        <button type="button" className="btnBlackKeys" value="34.6478">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="34.6478"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#1
         </button>
-        <button type="button" className="btnWhiteKeys" value="36.7081">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="36.7081"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D1
         </button>
-        <button type="button" className="btnBlackKeys" value="38.8909">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="38.8909"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#1
         </button>
-        <button type="button" className="btnWhiteKeys" value="41.2034">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="41.2034"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E1
         </button>
-        <button type="button" className="btnWhiteKeys" value="43.6535">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="43.6535"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F1
         </button>
-        <button type="button" className="btnBlackKeys" value="46.2493">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="46.2493"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#1
         </button>
-        <button type="button" className="btnWhiteKeys" value="48.9994">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="48.9994"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G1
         </button>
-        <button type="button" className="btnBlackKeys" value="51.9131">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="51.9131"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#1
         </button>
-        <button type="button" className="btnWhiteKeys" value="55.0000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="55.0000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A1
         </button>
-        <button type="button" className="btnBlackKeys" value="58.2705">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="58.2705"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#1
         </button>
-        <button type="button" className="btnWhiteKeys" value="61.7354">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="61.7354"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B1
         </button>
-        <button type="button" className="btnWhiteKeys" value="65.4064">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="65.4064"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C2
         </button>
-        <button type="button" className="btnBlackKeys" value="69.2957">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="69.2957"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#2
         </button>
-        <button type="button" className="btnWhiteKeys" value="73.4162">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="73.4162"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D2
         </button>
-        <button type="button" className="btnBlackKeys" value="77.7817">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="77.7817"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#2
         </button>
-        <button type="button" className="btnWhiteKeys" value="82.4069">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="82.4069"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E2
         </button>
-        <button type="button" className="btnWhiteKeys" value="87.3071">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="87.3071"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F2
         </button>
-        <button type="button" className="btnBlackKeys" value="92.4986">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="92.4986"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#2
         </button>
-        <button type="button" className="btnWhiteKeys" value="97.9989">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="97.9989"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G2
         </button>
-        <button type="button" className="btnBlackKeys" value="103.826">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="103.826"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#2
         </button>
-        <button type="button" className="btnWhiteKeys" value="110.000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="110.000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A2
         </button>
-        <button type="button" className="btnBlackKeys" value="116.541">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="116.541"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#2
         </button>
-        <button type="button" className="btnWhiteKeys" value="123.471">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="123.471"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B2
         </button>
-        <button type="button" className="btnWhiteKeys" value="130.813">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="130.813"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C3
         </button>
-        <button type="button" className="btnBlackKeys" value="138.591">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="138.591"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#3
         </button>
-        <button type="button" className="btnWhiteKeys" value="146.832">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="146.832"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D3
         </button>
-        <button type="button" className="btnBlackKeys" value="155.563">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="155.563"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#3
         </button>
-        <button type="button" className="btnWhiteKeys" value="164.814">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="164.814"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E3
         </button>
-        <button type="button" className="btnWhiteKeys" value="174.614">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="174.614"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F3
         </button>
-        <button type="button" className="btnBlackKeys" value="184.997">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="184.997"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#3
         </button>
-        <button type="button" className="btnWhiteKeys" value="195.998">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="195.998"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G3
         </button>
-        <button type="button" className="btnBlackKeys" value="207.652">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="207.652"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#3
         </button>
-        <button type="button" className="btnWhiteKeys" value="220.000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="220.000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A3
         </button>
-        <button type="button" className="btnBlackKeys" value="233.082">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="233.082"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#3
         </button>
-        <button type="button" className="btnWhiteKeys" value="246.942">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="246.942"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B3
         </button>
-        <button type="button" className="btnWhiteKeys" value="261.626">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="261.626"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C4
         </button>
-        <button type="button" className="btnBlackKeys" value="277.183">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="277.183"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#4
         </button>
-        <button type="button" className="btnWhiteKeys" value="293.665">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="293.665"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D4
         </button>
-        <button type="button" className="btnBlackKeys" value="311.127">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="311.127"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#4
         </button>
-        <button type="button" className="btnWhiteKeys" value="329.628">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="329.628"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E4
         </button>
-        <button type="button" className="btnWhiteKeys" value="349.228">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="349.228"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F4
         </button>
-        <button type="button" className="btnBlackKeys" value="369.994">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="369.994"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#4
         </button>
-        <button type="button" className="btnWhiteKeys" value="391.995">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="391.995"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G4
         </button>
-        <button type="button" className="btnBlackKeys" value="415.305">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="415.305"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#4
         </button>
-        <button type="button" className="btnWhiteKeys" value="440.000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="440.000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A4
         </button>
-        <button type="button" className="btnBlackKeys" value="466.164">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="466.164"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#4
         </button>
-        <button type="button" className="btnWhiteKeys" value="493.883">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="493.883"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B4
         </button>
-        <button type="button" className="btnWhiteKeys" value="523.251">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="523.251"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C5
         </button>
-        <button type="button" className="btnBlackKeys" value="554.365">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="554.365"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#5
         </button>
-        <button type="button" className="btnWhiteKeys" value="587.330">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="587.330"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D5
         </button>
-        <button type="button" className="btnBlackKeys" value="622.254">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="622.254"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#5
         </button>
-        <button type="button" className="btnWhiteKeys" value="659.255">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="659.255"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E5
         </button>
-        <button type="button" className="btnWhiteKeys" value="698.456">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="698.456"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F5
         </button>
-        <button type="button" className="btnBlackKeys" value="739.989">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="739.989"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#5
         </button>
-        <button type="button" className="btnWhiteKeys" value="783.991">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="783.991"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G5
         </button>
-        <button type="button" className="btnBlackKeys" value="830.609">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="830.609"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#5
         </button>
-        <button type="button" className="btnWhiteKeys" value="880.000">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="880.000"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A5
         </button>
-        <button type="button" className="btnBlackKeys" value="932.328">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="932.328"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#5
         </button>
-        <button type="button" className="btnWhiteKeys" value="987.767">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="987.767"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B5
         </button>
-        <button type="button" className="btnWhiteKeys" value="1046.50">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1046.50"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C6
         </button>
-        <button type="button" className="btnBlackKeys" value="1108.73">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="1108.73"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1174.66">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1174.66"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D6
         </button>
-        <button type="button" className="btnBlackKeys" value="1244.51">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="1244.51"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1318.51">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1318.51"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1396.91">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1396.91"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F6
         </button>
-        <button type="button" className="btnBlackKeys" value="1479.98">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="1479.98"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1567.98">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1567.98"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G6
         </button>
-        <button type="button" className="btnBlackKeys" value="1661.22">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="1661.22"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1760.00">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1760.00"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A6
         </button>
-        <button type="button" className="btnBlackKeys" value="1864.66">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="1864.66"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#6
         </button>
-        <button type="button" className="btnWhiteKeys" value="1975.53">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="1975.53"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B6
         </button>
-        <button type="button" className="btnWhiteKeys" value="2093.00">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="2093.00"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C7
         </button>
-        <button type="button" className="btnBlackKeys" value="2217.46">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="2217.46"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C#7
         </button>
-        <button type="button" className="btnWhiteKeys" value="2349.32">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="2349.32"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D7
         </button>
-        <button type="button" className="btnBlackKeys" value="2489.02">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="2489.02"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           D#7
         </button>
-        <button type="button" className="btnWhiteKeys" value="2637.02">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="2637.02"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           E7
         </button>
-        <button type="button" className="btnWhiteKeys" value="2793.83">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="2793.83"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F7
         </button>
-        <button type="button" className="btnBlackKeys" value="2959.96">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="2959.96"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           F#7
         </button>
-        <button type="button" className="btnWhiteKeys" value="3135.96">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="3135.96"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G7
         </button>
-        <button type="button" className="btnBlackKeys" value="3322.44">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="3322.44"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           G#7
         </button>
-        <button type="button" className="btnWhiteKeys" value="3520.00">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="3520.00"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A7
         </button>
-        <button type="button" className="btnBlackKeys" value="3729.31">
+        <button
+          type="button"
+          className="btnBlackKeys"
+          value="3729.31"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           A#7
         </button>
-        <button type="button" className="btnWhiteKeys" value="3951.07">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="3951.07"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           B7
         </button>
-        <button type="button" className="btnWhiteKeys" value="4186.01">
+        <button
+          type="button"
+          className="btnWhiteKeys"
+          value="4186.01"
+          onMouseDown={this.handleDown}
+          onMouseUp={this.handleUp}
+        >
           C8
         </button>
       </div>
