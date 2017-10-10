@@ -14,18 +14,14 @@ class Keyboard extends Component {
     this.setState({ note: e.target.textContent })
   }
 
-  handleMouseDown(e) {
-    'mousedown', function(e) {
-      //play the note on mouse down
-      synth.triggerAttack(e.target.textContent)
-    }
+  handleDown = e => {
+    synth.triggerAttack(e.target.textContent)
   }
-  handleMouseUp(e) {
-    'mouseup', function(e) {
-      //play the note on mouse down
-      synth.triggerRelease(e.target.textContent)
-    }
+  handleUp = e => {
+    synth.triggerRelease(e.target.textContent)
   }
+  onMouseDown = this.handleDown
+  onMouseUp = this.handleUp
 
   render() {
     return (
