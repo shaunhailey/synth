@@ -155,7 +155,10 @@ h3 {
 /*slider styling*/
 
 .slider1,
-.slider2 {
+.slider2,
+.OSC1slider1,
+.FModslider1,
+.OSC2slider1 {
   display: inline-block;
   height: 17px;
   padding: 0;

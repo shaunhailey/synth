@@ -20,8 +20,6 @@ class Keyboard extends Component {
   handleUp = e => {
     synth.triggerRelease()
   }
-  onMouseDown = this.handleDown
-  onMouseUp = this.handleUp
 
   render() {
     return (

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import '../styles/noisebox.css'
 
 class Noisebox extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div className="wrapper">
@@ -49,7 +52,7 @@ class Noisebox extends Component {
 
             <div className="leftBar">
               <div className="patchGainSliderLeft">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider2" />
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider2" id="Gain1" />
                 <h3 className="verticalSlider">Gain</h3>
                 <h3 className="verticalSliderTicks">| | | | | | | | | | |</h3>
               </div>
@@ -57,7 +60,7 @@ class Noisebox extends Component {
 
             <div className="secondBar">
               <div className="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC1" />
                 <datalist id="tickmarks">
                   <option value="0" />
                   <option value="1" />
@@ -76,12 +79,12 @@ class Noisebox extends Component {
                 <h3>OSC1</h3>
               </div>
               <div className="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="FMod1" />
                 <h3 className="horizontalSliderTicks">| | | | | | | | | | |</h3>
                 <h3>FMod</h3>
               </div>
               <div className="slider1">
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" />
+                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC2" />
                 <h3 className="horizontalSliderTicks">| | | | | | | | | | |</h3>
                 <h3>OSC2</h3>
               </div>
