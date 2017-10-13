@@ -53,6 +53,12 @@ h3 {
   height: 65px;
   width: 150px;
 }
+.effectGainSliderLeft {
+  height: 65px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
 
 .outerShell1 {
   border-color: grey;
@@ -102,6 +108,11 @@ h3 {
 }
 
 .leftBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.leftEffectBar {
   display: flex;
   flex-direction: row;
   justify-content: center;
