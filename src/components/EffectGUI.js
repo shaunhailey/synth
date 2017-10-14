@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import EffectSelection from './EffectSelection.js'
 
 class EffectGUI extends Component {
   render() {
     return (
       <div className="effectWrapper">
+       <EffectSelection />
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">

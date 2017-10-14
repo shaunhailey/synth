@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import '../styles/App.css'
 import '../styles/noisebox.css'
 import Noisebox from './Noisebox.js'
-import EffectGUI from './EffectGUI.js'
+// import AdderButton from './AdderButton.js'
+// import AdderGUI from './AdderGUI.js'
+// import EffectLogic from './EffectLogic.js'
 
 export default class Instrument extends Component {
+
+
+
+
+
   render() {
-    let chosenEffects = effects.map(effect => {
-      return <Effect id={effect.id} />
-    })
     return (
-      <div className="app">
+      <div className="Instrument">
         <Noisebox />
-        {chosenEffects}
       </div>
     )
   }

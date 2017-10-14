@@ -5,23 +5,18 @@ class Noisebox extends Component {
   constructor(props) {
     super(props)
   }
+    handleClick = (e) => {
+      console.log('clicked')
+    }
+
   render() {
     return (
       <div className="wrapper">
-        <div className="Adder">
-          <div className="patchAdder">
-            <button type="button" className="btn" value="addInstrument">
-              Add Instrument
-            </button>
-            <button type="button" className="btn" value="addEffect">
-              Add Effect
-            </button>
-          </div>
-        </div>
+
         <div className="synthBox1">
           <div className="outerShell1">
             <div className="topBar">
-              <p>Instrument 1</p>
+              <p>Instrument</p>
 
               <div className="topBarRight">
                 <div className="topBarButton">
