@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PingPongDelay from './PingPongDelay.js'
 
 
 class DisplaySelectedEffect extends Component {
@@ -8,8 +9,8 @@ class DisplaySelectedEffect extends Component {
   }
   render(){
     return(
-      <div>
-        {this.props.selectedEffect}
+      <div className='disPlay'>
+        {this.props.value}
       </div>
     )
   }

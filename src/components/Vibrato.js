@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import EffectSelection from './EffectSelection.js'
 
-class PingPongDelay extends Component {
+class Vibrato extends Component {
   render() {
     return (
       <div className="effectWrapper">
@@ -9,7 +9,7 @@ class PingPongDelay extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Ping Pong Delay</p>
+              <p>Vibrato</p>
 
               <div className="topBarRight">
                 </div>
@@ -77,4 +77,4 @@ class PingPongDelay extends Component {
   }
 }
 
-export default PingPongDelay
+export default Vibrato

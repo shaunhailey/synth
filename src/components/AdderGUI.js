@@ -16,7 +16,6 @@ class AdderButton extends Component {
       <div>
         <Instrument />
         <EffectSelection />
-        <DisplaySelectedEffect />
       </div>
     )
   }

@@ -2,6 +2,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.disPlay {
+  height: 50px;
+  width: 100%;
+  border-style: solid;
+  border-color: red
+}
+
 body {
   background-color: lightslategrey;
   position: absolute;
@@ -32,6 +39,11 @@ body {
 
 .Adder {
   display: flex;
+  flex-direction: column;
+}
+.patchAdder{
+  display: flex;
+  justify-content: center;
 }
 .patchAdder,
 .stepAdder {
