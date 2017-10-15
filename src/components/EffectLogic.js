@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 
 let effects = [
   {
+    id: 0
+    name: 'Select An Effect'
+  }
+  {
     id: 1,
     name: 'PingPongDelay',
     controls: {
       delayTime: 0.25,
       maxDelayTime: 1,
-      wet: effect.wet.value
     }
   },
   {
@@ -19,9 +22,9 @@ let effects = [
     }
   }
 ]
+let effect = effects.id
 
 export default class EffectLogic extends Component {
   render() {
-    state.effects.map(effect => <Effect id={effect.id} />)
   }
 }

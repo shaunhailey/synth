@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import EffectSelection from './EffectSelection.js'
-import RemoverGUI from './RemoverGUI.js'
 
-class EffectGUI extends Component {
+class PingPongDelay extends Component {
   render() {
     return (
       <div className="effectWrapper">
@@ -10,7 +9,7 @@ class EffectGUI extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Effect 1</p>
+              <p>Ping Pong Delay</p>
 
               <div className="topBarRight">
                 <RemoverGUI />
@@ -79,4 +78,4 @@ class EffectGUI extends Component {
   }
 }
 
-export default EffectGUI
+export default PingPongDelay
