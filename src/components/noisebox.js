@@ -7,11 +7,18 @@ var pingPong = new Tone.PingPongDelay(0.9)
 let vibrato = new Tone.Vibrato(99)
 let masterMute =Tone.Master.mute
 let synth = new Tone.Synth().chain(vibrato, Tone.Master)
+let mainGain = ''
 
 class Noisebox extends Component {
   constructor(props) {
     super(props)
+  this.handleGain = this.handleGain.bind(this)
+  this.state = {mainGain: ''}
   }
+    handleGain(e) {
+      this.setState({mainGain: e.target.value})
+      console.log(mainGain)
+    }
 
 
   render() {
@@ -33,7 +40,7 @@ class Noisebox extends Component {
             <div className="leftBar">
               <div className="patchGainSliderLeft">
                 <h3 className="verticalSlider">Instrument Gain</h3>
-                <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider2" id="Gain1" />
+                <input type="range" min="0" max="11" step="0.01" className="slider2" id="Gain1" value={this.state.value} onChange={this.handleGain} />
               </div>
             </div>
           </div>
@@ -42,5 +49,6 @@ class Noisebox extends Component {
     )
   }
 }
+
 
 export default Noisebox
