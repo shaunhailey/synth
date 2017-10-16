@@ -1,27 +1,20 @@
 import React, { Component } from 'react'
 import '../styles/keys.css'
-import Tone from 'tone'
-
-var pingPong = new Tone.PingPongDelay(0.9)
-let vibrato = new Tone.Vibrato(99)
-let synth = new Tone.Synth().chain(vibrato, Tone.Master)
-
 
 class Keyboard extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { note: '' }
-    this.handleNoteChange = this.handleNoteChange.bind(this)
+  state = {
+    note: ''
   }
-  handleNoteChange(e) {
+
+  handleNoteChange = e => {
     this.setState({ note: e.target.textContent })
   }
 
   handleDown = e => {
-    synth.triggerAttack(e.target.textContent)
+    this.props.synth.triggerAttack(e.target.textContent)
   }
   handleUp = e => {
-    synth.triggerRelease()
+    this.props.synth.triggerRelease()
   }
 
   render() {

@@ -3,19 +3,21 @@ import Instrument from './Instrument.js'
 import EffectSelection from './EffectSelection.js'
 import Keyboard from './Keyboard.js'
 
-
 class AdderButton extends Component {
-    constructor(props){
-      super(props)
-    }
+  constructor(props) {
+    super(props)
+  }
 
-    render() {
-
+  render() {
     return (
       <div>
-        <Instrument />
-        <EffectSelection />
-        <Keyboard />
+        <Instrument gain={this.props.gain} />
+        <EffectSelection
+          effects={this.props.effects}
+          addEffect={this.props.addEffect}
+          removeEffect={this.props.removeEffect}
+        />
+        <Keyboard synth={this.props.synth} />
       </div>
     )
   }

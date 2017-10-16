@@ -1,58 +1,83 @@
 import React, { Component } from 'react'
-import EffectSelection from './EffectSelection.js'
 
-let vibFreq= ''
-let vibDepth= ''
+let vibFreq = ''
+let vibDepth = ''
 
 class Vibrato extends Component {
-  constructor(props){
-    super(props)
-    this.handleVibFreq = this.handleVibFreq.bind(this)
-    this.handleVibDepth = this.handleVibDepth.bind(this)
-
-    this.state = {vibFreq: '', vibDepth: ''}
+  state = {
+    vibFreq: '',
+    vibDepth: ''
   }
-      handleVibFreq(e) {
-        this.setState({vibFreq: e.target.value})
-        console.log(vibFreq)
-      }
-      handleVibDepth(e) {
-        this.setState({vibDepth: e.target.value})
-        console.log(vibDepth)
-      }
+
+  componentDidMount() {
+    this.setState({
+      vibFreq: this.props.node.frequency.value,
+      vibDepth: this.props.node.depth.value
+    })
+  }
+
+  handleVibFreq = e => {
+    this.props.node.frequency.value = e.target.value
+    this.setState({ vibFreq: e.target.value })
+  }
+
+  handleVibDepth = e => {
+    this.props.node.depth.value = e.target.value
+    this.setState({ vibDepth: e.target.value })
+  }
+
   render() {
     return (
       <div className="effectWrapper">
-       <EffectSelection />
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
               <p>Vibrato</p>
 
-              <div className="topBarRight">
-                </div>
-                <div className="onOff">
-                  <button type="button" className="btn" value="Mute">
-                    Mute
-                  </button>
-                </div>
+              <div className="topBarRight" />
+              <div className="onOff">
+                <button type="button" className="btn" value="Mute">
+                  Mute
+                </button>
+                <button type="button" className="btnX" value="deleteInstrument" onClick={this.props.removeEffect}>
+                  &times;
+                </button>
               </div>
             </div>
-            <div className="leftEffectBar">
-              <div className="effectGainSliderLeft">
-                <div className="slider1">
-                  <input type="range" min="0" max="11" step="0.01" className="slider1" id="VibFreq" value={this.state.value} onChange={this.handleVibFreq} />
+          </div>
+          <div className="leftEffectBar">
+            <div className="effectGainSliderLeft">
+              <div className="slider1">
+                <input
+                  type="range"
+                  min="0"
+                  max="11"
+                  step="0.01"
+                  className="slider1"
+                  id="VibFreq"
+                  value={this.state.value}
+                  onChange={this.handleVibFreq}
+                />
 
-                  <h3>Frequency</h3>
-                </div>
-                <div className="slider1">
-                  <input type="range" min="0" max="11" step="0.01" className="slider1" id="VibDepth" value={this.state.value} onChange={this.handleVibDepth} />
-                  <h3>Depth</h3>
-                </div>
+                <h3>Frequency</h3>
+              </div>
+              <div className="slider1">
+                <input
+                  type="range"
+                  min="0"
+                  max="11"
+                  step="0.01"
+                  className="slider1"
+                  id="VibDepth"
+                  value={this.state.value}
+                  onChange={this.handleVibDepth}
+                />
+                <h3>Depth</h3>
               </div>
             </div>
           </div>
         </div>
+      </div>
     )
   }
 }

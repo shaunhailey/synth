@@ -4,19 +4,13 @@ import '../styles/noisebox.css'
 import Noisebox from './Noisebox.js'
 import Tone from 'tone'
 
-
 // let synth = new Tone.Synth().connect(effect)
 
 export default class Instrument extends Component {
-
-
-
-
-
   render() {
     return (
       <div className="Instrument">
-        <Noisebox />
+        <Noisebox gain={this.props.gain} synth={this.props.synth} />
       </div>
     )
   }
