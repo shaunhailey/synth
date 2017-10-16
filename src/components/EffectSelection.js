@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import PingPongDelay from './PingPongDelay.js'
-import Vibrato from './Vibrato.js'
 import EffectLogic from './EffectLogic.js'
 import Tone from 'tone'
 

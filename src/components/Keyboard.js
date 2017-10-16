@@ -4,7 +4,7 @@ import Tone from 'tone'
 
 var pingPong = new Tone.PingPongDelay(0.9)
 let vibrato = new Tone.Vibrato(99)
-let synth = new Tone.Synth().chain(pingPong, vibrato, Tone.Master)
+let synth = new Tone.Synth().chain(vibrato, Tone.Master)
 
 
 class Keyboard extends Component {

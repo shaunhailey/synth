@@ -31,17 +31,6 @@ class Vibrato extends Component {
 
               <div className="topBarRight">
                 </div>
-
-                <div className="outputSelector">
-                  <select id="patchOutput">
-                    <option value="value1" value>
-                      Output to: Master
-                    </option>
-                    <option value="value2">Output to: Patch2</option>
-                    <option value="value3">Output to: Patch3</option>
-                    <option value="value4">Output to: Patch4</option>
-                  </select>
-                </div>
                 <div className="onOff">
                   <button type="button" className="btn" value="Mute">
                     Mute

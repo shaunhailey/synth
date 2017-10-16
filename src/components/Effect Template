@@ -1,7 +1,0 @@
-Effect Templates
-
-Effect Slider Control
-
-<div className="slider1">
-  <input type="range" min="0" max="11" step="0.01" className="slider1" id="title" />
-  <h3>Title</h3>
