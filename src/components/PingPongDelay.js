@@ -7,6 +7,7 @@ import Tone from 'tone'
 // var pingPong = new Tone.PingPongDelay(`${PPDdelayTime}`)
 // var synth = new Tone.Synth().connect(pingPong)
 // var master = '.toMaster()'
+let PPDdelayTime= ''
 
 class PingPongDelay extends Component {
   constructor(props){
@@ -16,6 +17,7 @@ class PingPongDelay extends Component {
   }
       handleDelayTime(e) {
         this.setState({PPDdelayTime: e.target.value})
+        console.log(PPDdelayTime)
       }
 
   render() {

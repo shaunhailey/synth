@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import DisplaySelectedEffect from './DisplaySelectedEffect.js'
 import PingPongDelay from './PingPongDelay.js'
 import Vibrato from './Vibrato.js'
 import EffectLogic from './EffectLogic.js'
@@ -19,15 +18,6 @@ class EffectSelection extends Component {
         this.setState({name: e.target.value})
       }
   render() {
-    // const selectedEffect = this.state.value
-    // let choice = null
-    // if (selectedEffect === 'PingPongDelay'){
-    //   choice = <PingPongDelay />
-    // } else if (selectedEffect === 'Vibrato'){
-    //   choice = <Vibrato />
-    // } else {
-    //   choice = <div className="noEffect" />
-    // }
 
     return (
       <div className="Adder">
