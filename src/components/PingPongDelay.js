@@ -1,8 +1,25 @@
 import React, { Component } from 'react'
 import EffectSelection from './EffectSelection.js'
+import Tone from 'tone'
+
+
+// let synth = new Tone.Synth().chain(`${chain}`Tone.Master)
+// var pingPong = new Tone.PingPongDelay(`${PPDdelayTime}`)
+// var synth = new Tone.Synth().connect(pingPong)
+// var master = '.toMaster()'
 
 class PingPongDelay extends Component {
+  constructor(props){
+    super(props)
+    this.handleDelayTime = this.handleDelayTime.bind(this)
+    this.state = {PPDdelayTime: ''}
+  }
+      handleDelayTime(e) {
+        this.setState({PPDdelayTime: e.target.value})
+      }
+
   render() {
+
     return (
       <div className="effectWrapper">
        <EffectSelection />
@@ -10,19 +27,7 @@ class PingPongDelay extends Component {
           <div className="outerShellEffect">
             <div className="topBar">
               <p>Ping Pong Delay</p>
-
               <div className="topBarRight">
-                </div>
-
-                <div className="outputSelector">
-                  <select id="patchOutput">
-                    <option value="value1" value>
-                      Output to: Master
-                    </option>
-                    <option value="value2">Output to: Patch2</option>
-                    <option value="value3">Output to: Patch3</option>
-                    <option value="value4">Output to: Patch4</option>
-                  </select>
                 </div>
                 <div className="onOff">
                   <button type="button" className="btn" value="Mute">
@@ -34,41 +39,10 @@ class PingPongDelay extends Component {
             <div className="leftEffectBar">
               <div className="effectGainSliderLeft">
                 <div className="slider1">
-                  <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC1" />
-                  <datalist id="tickmarks">
-                    <option value="0" />
-                    <option value="1" />
-                    <option value="2" />
-                    <option value="3" />
-                    <option value="4" />
-                    <option value="5" />
-                    <option value="6" />
-                    <option value="7" />
-                    <option value="8" />
-                    <option value="9" />
-                    <option value="10" />
-                    <option value="11" />
-                  </datalist>
-                  <h3>OSC1</h3>
+                  <input type="range" value={this.state.value} onChange={this.handleDelayTime} min="0" max="1" step="0.01" className="slider1" id="PPDdelayTime" />
+                  <h3>Delay</h3>
                 </div>
-                <div className="slider1">
-                  <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC1" />
-                  <datalist id="tickmarks">
-                    <option value="0" />
-                    <option value="1" />
-                    <option value="2" />
-                    <option value="3" />
-                    <option value="4" />
-                    <option value="5" />
-                    <option value="6" />
-                    <option value="7" />
-                    <option value="8" />
-                    <option value="9" />
-                    <option value="10" />
-                    <option value="11" />
-                  </datalist>
-                  <h3>OSC2</h3>
-                </div>
+
               </div>
             </div>
           </div>

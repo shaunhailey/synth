@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
 import '../styles/noisebox.css'
+import Tone from 'tone'
+
+
+var pingPong = new Tone.PingPongDelay(0.9)
+let vibrato = new Tone.Vibrato(99)
+let masterMute =Tone.Master.mute
+let synth = new Tone.Synth().chain(vibrato, Tone.Master)
 
 class Noisebox extends Component {
   constructor(props) {
     super(props)
   }
-    handleClick = (e) => {
-      console.log('clicked')
-    }
+
 
   render() {
     return (
       <div className="wrapper">
-
         <div className="synthBox1">
           <div className="outerShell1">
             <div className="topBar">
@@ -24,25 +28,8 @@ class Noisebox extends Component {
                     X
                   </button>
                 </div>
-
-                <div className="outputSelector">
-                  <select id="patchOutput">
-                    <option value="value1" value>
-                      Output to: Master
-                    </option>
-                    <option value="value2">Output to: Effect 1</option>
-                    <option value="value3">Output to: Effect 2</option>
-                    <option value="value4">Output to: Effect 3</option>
-                  </select>
-                </div>
-                <div className="onOff">
-                  <button type="button" className="btn" value="Mute">
-                    Mute
-                  </button>
-                </div>
               </div>
             </div>
-
             <div className="leftBar">
               <div className="patchGainSliderLeft">
                 <h3 className="verticalSlider">Instrument Gain</h3>

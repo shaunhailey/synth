@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import '../styles/keys.css'
 import Tone from 'tone'
 
-let synth = new Tone.Synth().toMaster()
+var pingPong = new Tone.PingPongDelay(0.9)
+let vibrato = new Tone.Vibrato(99)
+let synth = new Tone.Synth().chain(Tone.Master)
+
 
 class Keyboard extends Component {
   constructor(props) {

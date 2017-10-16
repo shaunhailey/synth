@@ -3,6 +3,14 @@ import EffectSelection from './EffectSelection.js'
 import RemoverGUI from './RemoverGUI.js'
 
 class EffectGUI extends Component {
+  constructor(props){
+    super(props)
+    this.handleSelect = this.handleSelect.bind(this)
+    this.state = {value: ''}
+  }
+      handleSelect(e) {
+        this.setState({value: e.target.value})
+      }
   render() {
     return (
       <div className="effectWrapper">
@@ -15,17 +23,6 @@ class EffectGUI extends Component {
               <div className="topBarRight">
                 <RemoverGUI />
                 </div>
-
-                <div className="outputSelector">
-                  <select id="patchOutput">
-                    <option value="value1" value>
-                      Output to: Master
-                    </option>
-                    <option value="value2">Output to: Patch2</option>
-                    <option value="value3">Output to: Patch3</option>
-                    <option value="value4">Output to: Patch4</option>
-                  </select>
-                </div>
                 <div className="onOff">
                   <button type="button" className="btn" value="Mute">
                     Mute
@@ -37,38 +34,10 @@ class EffectGUI extends Component {
               <div className="effectGainSliderLeft">
                 <div className="slider1">
                   <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC1" />
-                  <datalist id="tickmarks">
-                    <option value="0" />
-                    <option value="1" />
-                    <option value="2" />
-                    <option value="3" />
-                    <option value="4" />
-                    <option value="5" />
-                    <option value="6" />
-                    <option value="7" />
-                    <option value="8" />
-                    <option value="9" />
-                    <option value="10" />
-                    <option value="11" />
-                  </datalist>
                   <h3>OSC1</h3>
                 </div>
                 <div className="slider1">
                   <input type="range" min="0" max="11" step="0.01" list="tickmarks" className="slider1" id="OSC1" />
-                  <datalist id="tickmarks">
-                    <option value="0" />
-                    <option value="1" />
-                    <option value="2" />
-                    <option value="3" />
-                    <option value="4" />
-                    <option value="5" />
-                    <option value="6" />
-                    <option value="7" />
-                    <option value="8" />
-                    <option value="9" />
-                    <option value="10" />
-                    <option value="11" />
-                  </datalist>
                   <h3>OSC2</h3>
                 </div>
               </div>

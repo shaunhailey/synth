@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import '../styles/App.css'
 import '../styles/noisebox.css'
 import Noisebox from './Noisebox.js'
-// import AdderButton from './AdderButton.js'
-// import AdderGUI from './AdderGUI.js'
-// import EffectLogic from './EffectLogic.js'
+import Tone from 'tone'
+
+
+// let synth = new Tone.Synth().connect(effect)
 
 export default class Instrument extends Component {
 
