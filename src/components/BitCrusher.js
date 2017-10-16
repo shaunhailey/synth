@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 
-let PPDdelayTime = ''
+let BCBits = ''
 
-class PingPongDelay extends Component {
+class BitCrusher extends Component {
   constructor(props) {
     super(props)
-    this.handleDelayTime = this.handleDelayTime.bind(this)
-    this.state = { PPDdelayTime: '' }
+    this.handleBCBits = this.handleBCBits.bind(this)
+    this.state = { BCBits: '' }
   }
 
   componentDidMount() {
-    this.setState({ PPDdelayTime: this.props.node.delayTime.value })
+    this.setState({ BCBits: this.props.node.bits.value })
   }
 
-  handleDelayTime(e) {
-    this.props.node.delayTime.value = e.target.value
-    this.setState({ PPDdelayTime: e.target.value })
-    console.log(PPDdelayTime)
+  handleBCBits(e) {
+    this.props.node.bits = e.target.value
+    this.setState({ BCBits: e.target.value })
+    console.log(BCBits)
   }
 
   render() {
@@ -25,7 +25,7 @@ class PingPongDelay extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Ping Pong Delay</p>
+              <p>BitCrusher</p>
               <div className="topBarRight" />
               <div className="onOff">
                 <button type="button" className="btn" value="Mute">
@@ -43,14 +43,14 @@ class PingPongDelay extends Component {
                 <input
                   type="range"
                   value={this.state.value}
-                  onChange={this.handleDelayTime}
-                  min="0"
-                  max="1"
-                  step="0.01"
+                  onChange={this.handleBCBits}
+                  min="1"
+                  max="8"
+                  step="1"
                   className="slider1"
-                  id="PPDdelayTime"
+                  id="bits"
                 />
-                <h3>Delay</h3>
+                <h3>Bits</h3>
               </div>
             </div>
           </div>
@@ -60,4 +60,4 @@ class PingPongDelay extends Component {
   }
 }
 
-export default PingPongDelay
+export default BitCrusher

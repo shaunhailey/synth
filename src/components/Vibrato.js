@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 
-let vibFreq = ''
-let vibDepth = ''
-
 class Vibrato extends Component {
   state = {
     vibFreq: '',

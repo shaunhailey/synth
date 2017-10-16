@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../styles/noisebox.css'
-import Tone from 'tone'
 
 // var pingPong = new Tone.PingPongDelay(0.9)
 // let vibrato = new Tone.Vibrato(99)

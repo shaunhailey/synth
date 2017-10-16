@@ -1,3 +1,3 @@
-// synth = synth.chain(, Tone.Master)
-
-export default synth
+// // synth = synth.chain(, Tone.Master)
+//
+// export default synth

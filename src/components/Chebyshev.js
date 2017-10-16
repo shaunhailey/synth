@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
 
-let PPDdelayTime = ''
+let order = ''
 
-class PingPongDelay extends Component {
-  constructor(props) {
-    super(props)
-    this.handleDelayTime = this.handleDelayTime.bind(this)
-    this.state = { PPDdelayTime: '' }
+class Chebyshev extends Component {
+  state = {
+    chebyOrder: ''
   }
 
   componentDidMount() {
-    this.setState({ PPDdelayTime: this.props.node.delayTime.value })
+    this.setState({ chebyOrder: this.props.node.order })
+    this.props.node.overdrive = '2x'
   }
 
-  handleDelayTime(e) {
-    this.props.node.delayTime.value = e.target.value
-    this.setState({ PPDdelayTime: e.target.value })
-    console.log(PPDdelayTime)
+  handleChebyOrder(e) {
+    this.props.node.order = e.target.value
+    this.setState({ chebyOrder: e.target.value })
+    console.log(this.props)
   }
 
   render() {
@@ -25,7 +24,7 @@ class PingPongDelay extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Ping Pong Delay</p>
+              <p>Chebyshev Distortion</p>
               <div className="topBarRight" />
               <div className="onOff">
                 <button type="button" className="btn" value="Mute">
@@ -43,14 +42,14 @@ class PingPongDelay extends Component {
                 <input
                   type="range"
                   value={this.state.value}
-                  onChange={this.handleDelayTime}
-                  min="0"
-                  max="1"
-                  step="0.01"
+                  onChange={this.handleChebyOrder}
+                  min="10"
+                  max="50"
+                  step="01"
                   className="slider1"
-                  id="PPDdelayTime"
+                  id="chebyOrder"
                 />
-                <h3>Delay</h3>
+                <h3>Order</h3>
               </div>
             </div>
           </div>
@@ -60,4 +59,4 @@ class PingPongDelay extends Component {
   }
 }
 
-export default PingPongDelay
+export default Chebyshev

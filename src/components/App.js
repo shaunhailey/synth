@@ -6,7 +6,7 @@ import AdderGUI from './AdderGUI.js'
 
 class App extends React.Component {
   state = {
-    gain: new Tone.Volume(-20),
+    gain: new Tone.Volume(0),
     synth: null,
     effects: []
   }
@@ -22,16 +22,19 @@ class App extends React.Component {
     const nodes = effects.map(ef => ef.node)
     this.setState({
       effects,
-      synth: new Tone.Synth().chain(this.state.gain, ...nodes, Tone.Master)
+      synth: new Tone.Synth().chain(...nodes, this.state.gain, Tone.Master)
     })
   }
 
   removeEffect = position => {
+    this.state.effects.forEach(ef => {
+      ef.node.disconnect(0)
+    })
     const effects = [...this.state.effects.slice(0, position), ...this.state.effects.slice(position + 1)]
     const nodes = effects.map(ef => ef.node)
     this.setState({
       effects,
-      synth: new Tone.Synth().chain(this.state.gain, ...nodes, Tone.Master)
+      synth: new Tone.Synth().chain(...nodes, this.state.gain, Tone.Master)
     })
   }
 

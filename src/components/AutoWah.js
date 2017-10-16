@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
 
-let PPDdelayTime = ''
-
-class PingPongDelay extends Component {
-  constructor(props) {
-    super(props)
-    this.handleDelayTime = this.handleDelayTime.bind(this)
-    this.state = { PPDdelayTime: '' }
+class AutoWah extends Component {
+  state = {
+    AWFreq: '',
+    AWOctaves: ''
   }
 
   componentDidMount() {
-    this.setState({ PPDdelayTime: this.props.node.delayTime.value })
+    this.setState({
+      AWFreq: this.props.node.baseFrequency,
+      AWOctaves: this.props.node.octaves.value
+    })
   }
 
-  handleDelayTime(e) {
-    this.props.node.delayTime.value = e.target.value
-    this.setState({ PPDdelayTime: e.target.value })
-    console.log(PPDdelayTime)
+  handleAWFreq = e => {
+    this.props.node.baseFrequency = e.target.value
+    this.setState({ AWFreq: e.target.value })
+  }
+
+  handleAWOctaves = e => {
+    this.props.node.octaves = e.target.value
+    this.setState({ AWOctaves: e.target.value })
   }
 
   render() {
@@ -25,7 +29,8 @@ class PingPongDelay extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Ping Pong Delay</p>
+              <p>AutoWah</p>
+
               <div className="topBarRight" />
               <div className="onOff">
                 <button type="button" className="btn" value="Mute">
@@ -42,15 +47,29 @@ class PingPongDelay extends Component {
               <div className="slider1">
                 <input
                   type="range"
-                  value={this.state.value}
-                  onChange={this.handleDelayTime}
-                  min="0"
-                  max="1"
-                  step="0.01"
+                  min="20"
+                  max="500"
+                  step="1"
                   className="slider1"
-                  id="PPDdelayTime"
+                  id="AWFreq"
+                  value={this.state.value}
+                  onChange={this.handleAWFreq}
                 />
-                <h3>Delay</h3>
+
+                <h3>Frequency</h3>
+              </div>
+              <div className="slider1">
+                <input
+                  type="range"
+                  min="0"
+                  max="8"
+                  step="1"
+                  className="slider1"
+                  id="AWOctaves"
+                  value={this.state.value}
+                  onChange={this.handleAWOctaves}
+                />
+                <h3>Octave</h3>
               </div>
             </div>
           </div>
@@ -60,4 +79,4 @@ class PingPongDelay extends Component {
   }
 }
 
-export default PingPongDelay
+export default AutoWah
