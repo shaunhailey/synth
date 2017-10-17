@@ -6,7 +6,7 @@
   height: 50px;
   width: 100%;
   border-style: solid;
-  border-color: red
+  border-color: red;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.patchAdder{
+.patchAdder {
   display: flex;
   justify-content: center;
 }
@@ -69,6 +69,14 @@ h3 {
   width: 800px;
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap;
+}
+.effectGainSliderLeft3-4item {
+  height: 110px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .outerShell1 {

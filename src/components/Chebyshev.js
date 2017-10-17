@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 
-let order = ''
-
 class Chebyshev extends Component {
-  state = {
-    chebyOrder: ''
+  constructor(props) {
+    super(props)
+    this.handleChebyOrder = this.handleChebyOrder.bind(this)
+    this.state = { chebyOrder: '' }
   }
 
   componentDidMount() {
     this.setState({ chebyOrder: this.props.node.order })
-    this.props.node.overdrive = '2x'
+    // this.props.node.overdrive = '2x'
   }
 
   handleChebyOrder(e) {
     this.props.node.order = e.target.value
     this.setState({ chebyOrder: e.target.value })
-    console.log(this.props)
+    console.log(this.props.value)
   }
 
   render() {
@@ -43,9 +43,9 @@ class Chebyshev extends Component {
                   type="range"
                   value={this.state.value}
                   onChange={this.handleChebyOrder}
-                  min="10"
-                  max="50"
-                  step="01"
+                  min="1"
+                  max="100"
+                  step="1"
                   className="slider1"
                   id="chebyOrder"
                 />

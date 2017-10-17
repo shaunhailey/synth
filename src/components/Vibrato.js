@@ -47,9 +47,9 @@ class Vibrato extends Component {
               <div className="slider1">
                 <input
                   type="range"
-                  min="0"
-                  max="11"
-                  step="0.01"
+                  min="1"
+                  max="20"
+                  step="1"
                   className="slider1"
                   id="VibFreq"
                   value={this.state.value}
@@ -62,7 +62,7 @@ class Vibrato extends Component {
                 <input
                   type="range"
                   min="0"
-                  max="11"
+                  max="1"
                   step="0.01"
                   className="slider1"
                   id="VibDepth"

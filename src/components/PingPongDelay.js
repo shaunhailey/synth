@@ -44,7 +44,7 @@ class PingPongDelay extends Component {
                   type="range"
                   value={this.state.value}
                   onChange={this.handleDelayTime}
-                  min="0"
+                  min="0.01"
                   max="1"
                   step="0.01"
                   className="slider1"

@@ -23,7 +23,7 @@ class EffectSelection extends Component {
       case 'AutoWah':
         return new Tone.AutoWah()
       case 'Chebyshev':
-        return new Tone.Chebyshev(50)
+        return new Tone.Chebyshev(100)
       case 'BitCrusher':
         return new Tone.BitCrusher(5)
     }

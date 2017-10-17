@@ -3,13 +3,15 @@ import React, { Component } from 'react'
 class AutoWah extends Component {
   state = {
     AWFreq: '',
-    AWOctaves: ''
+    AWOctaves: '',
+    AWSensi: ''
   }
 
   componentDidMount() {
     this.setState({
       AWFreq: this.props.node.baseFrequency,
-      AWOctaves: this.props.node.octaves.value
+      AWOctaves: this.props.node.octaves,
+      AWSensi: this.props.node.sensitivity
     })
   }
 
@@ -21,6 +23,11 @@ class AutoWah extends Component {
   handleAWOctaves = e => {
     this.props.node.octaves = e.target.value
     this.setState({ AWOctaves: e.target.value })
+  }
+
+  handleAWSensi = e => {
+    this.props.node.sensitivity = e.target.value
+    this.setState({ AWSensi: e.target.value })
   }
 
   render() {
@@ -43,26 +50,25 @@ class AutoWah extends Component {
             </div>
           </div>
           <div className="leftEffectBar">
-            <div className="effectGainSliderLeft">
+            <div className="effectGainSliderLeft3-4item">
               <div className="slider1">
                 <input
                   type="range"
-                  min="20"
-                  max="500"
+                  min="60"
+                  max="10000"
                   step="1"
                   className="slider1"
                   id="AWFreq"
                   value={this.state.value}
                   onChange={this.handleAWFreq}
                 />
-
                 <h3>Frequency</h3>
               </div>
               <div className="slider1">
                 <input
                   type="range"
-                  min="0"
-                  max="8"
+                  min="1"
+                  max="10"
                   step="1"
                   className="slider1"
                   id="AWOctaves"
@@ -70,6 +76,19 @@ class AutoWah extends Component {
                   onChange={this.handleAWOctaves}
                 />
                 <h3>Octave</h3>
+                <div className="slider1">
+                  <input
+                    type="range"
+                    min="-40"
+                    max="40"
+                    step="1"
+                    className="slider1"
+                    id="AWSensi"
+                    value={this.state.value}
+                    onChange={this.handleAWSensi}
+                  />
+                  <h3>Sensitivity</h3>
+                </div>
               </div>
             </div>
           </div>

@@ -44,8 +44,8 @@ class Noisebox extends Component {
                 <h3 className="verticalSlider">Instrument Gain</h3>
                 <input
                   type="range"
-                  min="0"
-                  max="11"
+                  min="-40"
+                  max="0"
                   step="0.01"
                   className="slider2"
                   id="Gain1"
