@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 
-class Chebyshev extends Component {
+let DDist = ''
+
+class Distortion extends Component {
   constructor(props) {
     super(props)
-    this.handleChebyOrder = this.handleChebyOrder.bind(this)
-    this.state = { chebyOrder: '' }
+    this.handleDistortion = this.handleDistortion.bind(this)
+    this.state = { DDist: '' }
   }
 
   componentDidMount() {
-    this.setState({ chebyOrder: this.props.node.order })
-    this.props.node.overdrive = '2x'
+    this.setState({ DDist: this.props.node.distortion })
   }
 
-  handleChebyOrder(e) {
-    this.props.node.order = e.target.value
-    this.setState({ chebyOrder: e.target.value })
-    console.log(this.props.value)
+  handleDistortion(e) {
+    this.props.node.distortion = e.target.value
+    this.setState({ DDist: e.target.value })
   }
 
   render() {
@@ -24,12 +24,9 @@ class Chebyshev extends Component {
         <div className="effectBox1">
           <div className="outerShellEffect">
             <div className="topBar">
-              <p>Chebyshev Distortion</p>
+              <p>Distortion</p>
               <div className="topBarRight" />
               <div className="onOff">
-                <button type="button" className="btn" value="Mute">
-                  Mute
-                </button>
                 <button type="button" className="btnX" value="deleteInstrument" onClick={this.props.removeEffect}>
                   &times;
                 </button>
@@ -42,14 +39,14 @@ class Chebyshev extends Component {
                 <input
                   type="range"
                   value={this.state.value}
-                  onChange={this.handleChebyOrder}
-                  min="1"
-                  max="100"
-                  step="1"
+                  onChange={this.handleDistortion}
+                  min="0"
+                  max="1000"
+                  step="0.01"
                   className="slider1"
-                  id="chebyOrder"
+                  id="DDist"
                 />
-                <h3>Order</h3>
+                <h3>Amount</h3>
               </div>
             </div>
           </div>
@@ -59,4 +56,4 @@ class Chebyshev extends Component {
   }
 }
 
-export default Chebyshev
+export default Distortion

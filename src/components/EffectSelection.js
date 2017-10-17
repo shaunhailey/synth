@@ -5,6 +5,8 @@ import Vibrato from './Vibrato'
 import AutoWah from './AutoWah'
 import Chebyshev from './Chebyshev'
 import BitCrusher from './BitCrusher'
+import Phaser from './Phaser'
+import Distortion from './Distortion'
 
 class EffectSelection extends Component {
   handleSelect = e => {
@@ -26,6 +28,10 @@ class EffectSelection extends Component {
         return new Tone.Chebyshev(100)
       case 'BitCrusher':
         return new Tone.BitCrusher(5)
+      case 'Phaser':
+        return new Tone.Phaser(0.5, 3, 350)
+      case 'Distortion':
+        return new Tone.Distortion(0.8)
     }
   }
 
@@ -44,6 +50,10 @@ class EffectSelection extends Component {
             return <Chebyshev {...effect} key={i} removeEffect={() => this.props.removeEffect(i)} />
           case 'BitCrusher':
             return <BitCrusher {...effect} key={i} removeEffect={() => this.props.removeEffect(i)} />
+          case 'Phaser':
+            return <Phaser {...effect} key={i} removeEffect={() => this.props.removeEffect(i)} />
+          case 'Distortion':
+            return <Distortion {...effect} key={i} removeEffect={() => this.props.removeEffect(i)} />
         }
       })
 
@@ -59,6 +69,8 @@ class EffectSelection extends Component {
             <option value="AutoWah">AutoWah</option>
             <option value="Chebyshev">Chebyshev</option>
             <option value="BitCrusher">BitCrusher</option>
+            <option value="Phaser">Phaser</option>
+            <option value="Distortion">Distortion</option>
           </select>
         </div>
         {effects}

@@ -3,6 +3,7 @@ import Tone from 'tone'
 import '../styles/App.css'
 import '../styles/noisebox.css'
 import AdderGUI from './AdderGUI.js'
+import MidiControl from './MidiControl'
 
 class App extends React.Component {
   state = {
@@ -13,7 +14,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      synth: new Tone.Synth().chain(this.state.gain, Tone.Master)
+      synth: new Tone.PolySynth().chain(this.state.gain, Tone.Master)
     })
   }
 
@@ -22,7 +23,7 @@ class App extends React.Component {
     const nodes = effects.map(ef => ef.node)
     this.setState({
       effects,
-      synth: new Tone.Synth().chain(...nodes, this.state.gain, Tone.Master)
+      synth: new Tone.PolySynth().chain(...nodes, this.state.gain, Tone.Master)
     })
   }
 
@@ -34,7 +35,7 @@ class App extends React.Component {
     const nodes = effects.map(ef => ef.node)
     this.setState({
       effects,
-      synth: new Tone.Synth().chain(...nodes, this.state.gain, Tone.Master)
+      synth: new Tone.PolySynth().chain(...nodes, this.state.gain, Tone.Master)
     })
   }
 
@@ -48,6 +49,7 @@ class App extends React.Component {
           removeEffect={this.removeEffect}
           synth={this.state.synth}
         />
+        <MidiControl synth={this.state.synth} />
       </div>
     )
   }
