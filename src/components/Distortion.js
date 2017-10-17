@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-let DDist = ''
-
 class Distortion extends Component {
   constructor(props) {
     super(props)
@@ -41,7 +39,7 @@ class Distortion extends Component {
                   value={this.state.value}
                   onChange={this.handleDistortion}
                   min="0"
-                  max="1000"
+                  max="100"
                   step="0.01"
                   className="slider1"
                   id="DDist"

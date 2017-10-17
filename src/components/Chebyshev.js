@@ -15,7 +15,6 @@ class Chebyshev extends Component {
   handleChebyOrder(e) {
     this.props.node.order = e.target.value
     this.setState({ chebyOrder: e.target.value })
-    console.log(this.props.value)
   }
 
   render() {
@@ -27,9 +26,6 @@ class Chebyshev extends Component {
               <p>Chebyshev Distortion</p>
               <div className="topBarRight" />
               <div className="onOff">
-                <button type="button" className="btn" value="Mute">
-                  Mute
-                </button>
                 <button type="button" className="btnX" value="deleteInstrument" onClick={this.props.removeEffect}>
                   &times;
                 </button>

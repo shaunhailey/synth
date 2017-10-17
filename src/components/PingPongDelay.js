@@ -28,9 +28,6 @@ class PingPongDelay extends Component {
               <p>Ping Pong Delay</p>
               <div className="topBarRight" />
               <div className="onOff">
-                <button type="button" className="btn" value="Mute">
-                  Mute
-                </button>
                 <button type="button" className="btnX" value="deleteInstrument" onClick={this.props.removeEffect}>
                   &times;
                 </button>

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-let BCBits = ''
-
 class BitCrusher extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +14,6 @@ class BitCrusher extends Component {
   handleBCBits(e) {
     this.props.node.bits = e.target.value
     this.setState({ BCBits: e.target.value })
-    console.log(BCBits)
   }
 
   render() {
@@ -28,9 +25,6 @@ class BitCrusher extends Component {
               <p>BitCrusher</p>
               <div className="topBarRight" />
               <div className="onOff">
-                <button type="button" className="btn" value="Mute">
-                  Mute
-                </button>
                 <button type="button" className="btnX" value="deleteInstrument" onClick={this.props.removeEffect}>
                   &times;
                 </button>

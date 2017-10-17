@@ -32,11 +32,7 @@ class Noisebox extends Component {
               <p>Instrument</p>
 
               <div className="topBarRight">
-                <div className="topBarButton">
-                  <button type="button" className="btnX" value="deleteInstrument">
-                    X
-                  </button>
-                </div>
+                <div className="topBarButton" />
               </div>
             </div>
             <div className="leftBar">
