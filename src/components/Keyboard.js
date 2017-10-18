@@ -14,7 +14,7 @@ class Keyboard extends Component {
     this.props.synth.triggerAttack(e.target.textContent)
   }
   handleUp = e => {
-    this.props.synth.triggerRelease()
+    this.props.synth.triggerRelease(e.target.textContent)
   }
 
   render() {
@@ -26,6 +26,7 @@ class Keyboard extends Component {
           value="27.5000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A0
         </button>
@@ -35,6 +36,7 @@ class Keyboard extends Component {
           value="29.1352"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#0
         </button>
@@ -44,6 +46,7 @@ class Keyboard extends Component {
           value="30.8677"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B0
         </button>
@@ -53,6 +56,7 @@ class Keyboard extends Component {
           value="32.7032"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C1
         </button>
@@ -62,6 +66,7 @@ class Keyboard extends Component {
           value="34.6478"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#1
         </button>
@@ -71,6 +76,7 @@ class Keyboard extends Component {
           value="36.7081"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D1
         </button>
@@ -80,6 +86,7 @@ class Keyboard extends Component {
           value="38.8909"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#1
         </button>
@@ -89,6 +96,7 @@ class Keyboard extends Component {
           value="41.2034"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E1
         </button>
@@ -98,6 +106,7 @@ class Keyboard extends Component {
           value="43.6535"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F1
         </button>
@@ -107,6 +116,7 @@ class Keyboard extends Component {
           value="46.2493"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#1
         </button>
@@ -116,6 +126,7 @@ class Keyboard extends Component {
           value="48.9994"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G1
         </button>
@@ -125,6 +136,7 @@ class Keyboard extends Component {
           value="51.9131"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#1
         </button>
@@ -134,6 +146,7 @@ class Keyboard extends Component {
           value="55.0000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A1
         </button>
@@ -143,6 +156,7 @@ class Keyboard extends Component {
           value="58.2705"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#1
         </button>
@@ -152,6 +166,7 @@ class Keyboard extends Component {
           value="61.7354"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B1
         </button>
@@ -161,6 +176,7 @@ class Keyboard extends Component {
           value="65.4064"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C2
         </button>
@@ -170,6 +186,7 @@ class Keyboard extends Component {
           value="69.2957"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#2
         </button>
@@ -179,6 +196,7 @@ class Keyboard extends Component {
           value="73.4162"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D2
         </button>
@@ -188,6 +206,7 @@ class Keyboard extends Component {
           value="77.7817"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#2
         </button>
@@ -206,6 +225,7 @@ class Keyboard extends Component {
           value="87.3071"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F2
         </button>
@@ -215,6 +235,7 @@ class Keyboard extends Component {
           value="92.4986"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#2
         </button>
@@ -224,6 +245,7 @@ class Keyboard extends Component {
           value="97.9989"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G2
         </button>
@@ -233,6 +255,7 @@ class Keyboard extends Component {
           value="103.826"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#2
         </button>
@@ -242,6 +265,7 @@ class Keyboard extends Component {
           value="110.000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A2
         </button>
@@ -251,6 +275,7 @@ class Keyboard extends Component {
           value="116.541"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#2
         </button>
@@ -260,6 +285,7 @@ class Keyboard extends Component {
           value="123.471"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B2
         </button>
@@ -269,6 +295,7 @@ class Keyboard extends Component {
           value="130.813"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C3
         </button>
@@ -278,6 +305,7 @@ class Keyboard extends Component {
           value="138.591"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#3
         </button>
@@ -287,6 +315,7 @@ class Keyboard extends Component {
           value="146.832"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D3
         </button>
@@ -296,6 +325,7 @@ class Keyboard extends Component {
           value="155.563"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#3
         </button>
@@ -305,6 +335,7 @@ class Keyboard extends Component {
           value="164.814"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E3
         </button>
@@ -314,6 +345,7 @@ class Keyboard extends Component {
           value="174.614"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F3
         </button>
@@ -323,6 +355,7 @@ class Keyboard extends Component {
           value="184.997"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#3
         </button>
@@ -332,6 +365,7 @@ class Keyboard extends Component {
           value="195.998"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G3
         </button>
@@ -341,6 +375,7 @@ class Keyboard extends Component {
           value="207.652"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#3
         </button>
@@ -350,6 +385,7 @@ class Keyboard extends Component {
           value="220.000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A3
         </button>
@@ -359,6 +395,7 @@ class Keyboard extends Component {
           value="233.082"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#3
         </button>
@@ -368,6 +405,7 @@ class Keyboard extends Component {
           value="246.942"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B3
         </button>
@@ -377,6 +415,7 @@ class Keyboard extends Component {
           value="261.626"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C4
         </button>
@@ -386,6 +425,7 @@ class Keyboard extends Component {
           value="277.183"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#4
         </button>
@@ -395,6 +435,7 @@ class Keyboard extends Component {
           value="293.665"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D4
         </button>
@@ -404,6 +445,7 @@ class Keyboard extends Component {
           value="311.127"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#4
         </button>
@@ -413,6 +455,7 @@ class Keyboard extends Component {
           value="329.628"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E4
         </button>
@@ -422,6 +465,7 @@ class Keyboard extends Component {
           value="349.228"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F4
         </button>
@@ -431,6 +475,7 @@ class Keyboard extends Component {
           value="369.994"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#4
         </button>
@@ -440,6 +485,7 @@ class Keyboard extends Component {
           value="391.995"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G4
         </button>
@@ -449,6 +495,7 @@ class Keyboard extends Component {
           value="415.305"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#4
         </button>
@@ -458,6 +505,7 @@ class Keyboard extends Component {
           value="440.000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A4
         </button>
@@ -467,6 +515,7 @@ class Keyboard extends Component {
           value="466.164"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#4
         </button>
@@ -476,6 +525,7 @@ class Keyboard extends Component {
           value="493.883"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B4
         </button>
@@ -485,6 +535,7 @@ class Keyboard extends Component {
           value="523.251"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C5
         </button>
@@ -494,6 +545,7 @@ class Keyboard extends Component {
           value="554.365"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#5
         </button>
@@ -503,6 +555,7 @@ class Keyboard extends Component {
           value="587.330"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D5
         </button>
@@ -512,6 +565,7 @@ class Keyboard extends Component {
           value="622.254"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#5
         </button>
@@ -521,6 +575,7 @@ class Keyboard extends Component {
           value="659.255"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E5
         </button>
@@ -530,6 +585,7 @@ class Keyboard extends Component {
           value="698.456"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F5
         </button>
@@ -539,6 +595,7 @@ class Keyboard extends Component {
           value="739.989"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#5
         </button>
@@ -548,6 +605,7 @@ class Keyboard extends Component {
           value="783.991"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G5
         </button>
@@ -557,6 +615,7 @@ class Keyboard extends Component {
           value="830.609"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#5
         </button>
@@ -566,6 +625,7 @@ class Keyboard extends Component {
           value="880.000"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A5
         </button>
@@ -575,6 +635,7 @@ class Keyboard extends Component {
           value="932.328"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#5
         </button>
@@ -584,6 +645,7 @@ class Keyboard extends Component {
           value="987.767"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B5
         </button>
@@ -593,6 +655,7 @@ class Keyboard extends Component {
           value="1046.50"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C6
         </button>
@@ -602,6 +665,7 @@ class Keyboard extends Component {
           value="1108.73"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#6
         </button>
@@ -611,6 +675,7 @@ class Keyboard extends Component {
           value="1174.66"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D6
         </button>
@@ -620,6 +685,7 @@ class Keyboard extends Component {
           value="1244.51"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#6
         </button>
@@ -629,6 +695,7 @@ class Keyboard extends Component {
           value="1318.51"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E6
         </button>
@@ -638,6 +705,7 @@ class Keyboard extends Component {
           value="1396.91"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F6
         </button>
@@ -647,6 +715,7 @@ class Keyboard extends Component {
           value="1479.98"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#6
         </button>
@@ -656,6 +725,7 @@ class Keyboard extends Component {
           value="1567.98"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G6
         </button>
@@ -665,6 +735,7 @@ class Keyboard extends Component {
           value="1661.22"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#6
         </button>
@@ -674,6 +745,7 @@ class Keyboard extends Component {
           value="1760.00"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A6
         </button>
@@ -683,6 +755,7 @@ class Keyboard extends Component {
           value="1864.66"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#6
         </button>
@@ -692,6 +765,7 @@ class Keyboard extends Component {
           value="1975.53"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B6
         </button>
@@ -701,6 +775,7 @@ class Keyboard extends Component {
           value="2093.00"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C7
         </button>
@@ -710,6 +785,7 @@ class Keyboard extends Component {
           value="2217.46"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C#7
         </button>
@@ -719,6 +795,7 @@ class Keyboard extends Component {
           value="2349.32"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D7
         </button>
@@ -728,6 +805,7 @@ class Keyboard extends Component {
           value="2489.02"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           D#7
         </button>
@@ -737,6 +815,7 @@ class Keyboard extends Component {
           value="2637.02"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           E7
         </button>
@@ -746,6 +825,7 @@ class Keyboard extends Component {
           value="2793.83"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F7
         </button>
@@ -755,6 +835,7 @@ class Keyboard extends Component {
           value="2959.96"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           F#7
         </button>
@@ -764,6 +845,7 @@ class Keyboard extends Component {
           value="3135.96"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G7
         </button>
@@ -773,6 +855,7 @@ class Keyboard extends Component {
           value="3322.44"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           G#7
         </button>
@@ -782,6 +865,7 @@ class Keyboard extends Component {
           value="3520.00"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A7
         </button>
@@ -791,6 +875,7 @@ class Keyboard extends Component {
           value="3729.31"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           A#7
         </button>
@@ -800,6 +885,7 @@ class Keyboard extends Component {
           value="3951.07"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           B7
         </button>
@@ -809,6 +895,7 @@ class Keyboard extends Component {
           value="4186.01"
           onMouseDown={this.handleDown}
           onMouseUp={this.handleUp}
+          onMouseOut={this.handleUp}
         >
           C8
         </button>
