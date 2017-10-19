@@ -3,8 +3,6 @@ import '../styles/App.css'
 import '../styles/noisebox.css'
 import Noisebox from './Noisebox.js'
 
-// let synth = new Tone.Synth().connect(effect)
-
 export default class Instrument extends Component {
   render() {
     return (

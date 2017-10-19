@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/noisebox.css'
 
-// var pingPong = new Tone.PingPongDelay(0.9)
-// let vibrato = new Tone.Vibrato(99)
-// let masterMute = Tone.Master.mute
-// let synth = new Tone.Synth().chain(vibrato, Tone.Master)
-// let mainGain = ''
-
 class Noisebox extends Component {
   constructor(props) {
     super(props)
