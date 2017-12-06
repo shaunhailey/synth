@@ -5,6 +5,8 @@ import '../styles/noisebox.css'
 import AdderGUI from './AdderGUI.js'
 import MidiControl from './MidiControl'
 
+let synth = ''
+
 class App extends React.Component {
   state = {
     gain: new Tone.Volume(0),
@@ -19,6 +21,7 @@ class App extends React.Component {
   }
 
   addEffect = effect => {
+    synth.releaseAll()
     const effects = [...this.state.effects, effect]
     const nodes = effects.map(ef => ef.node)
     this.setState({
@@ -28,6 +31,7 @@ class App extends React.Component {
   }
 
   removeEffect = position => {
+    synth.releaseAll()
     this.state.effects.forEach(ef => {
       ef.node.disconnect(0)
     })
